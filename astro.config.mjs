@@ -10,10 +10,17 @@ export default defineConfig({
   // 301-Weiterleitungen für alte WordPress-URLs (404 → korrekte Seite)
   redirects: {
     // Stadtspezifische Leistungsseiten → neue Leistungsseiten
+    // Beide Varianten (mit und ohne Trailing Slash) um "Alternative Seite"-Status zu vermeiden
+    '/animationen-regensburg':             { status: 301, destination: '/leistungen/animationen/' },
     '/animationen-regensburg/':            { status: 301, destination: '/leistungen/animationen/' },
+    '/social-media-marketing-regensburg':  { status: 301, destination: '/leistungen/social-media/' },
     '/social-media-marketing-regensburg/': { status: 301, destination: '/leistungen/social-media/' },
+    '/videomarketing-regensburg':          { status: 301, destination: '/leistungen/animationen/' },
     '/videomarketing-regensburg/':         { status: 301, destination: '/leistungen/animationen/' },
+    '/grafikdesign-regensburg':            { status: 301, destination: '/leistungen/grafikdesign/' },
     '/grafikdesign-regensburg/':           { status: 301, destination: '/leistungen/grafikdesign/' },
+    '/seo-regensburg':                     { status: 301, destination: '/leistungen/seo/' },
+    '/seo-regensburg/':                    { status: 301, destination: '/leistungen/seo/' },
 
     // Portfolio → Über uns
     '/marketing-agentur-portfolio/':       { status: 301, destination: '/ueber-uns/' },
